@@ -41,7 +41,7 @@ app.get('/hello', (req, res) => {
 })
 
 // route uses authRequired middleware to secure it
-app.get('/secure-data', authRequired(), (req, res) => {
+app.get('/secure', authRequired(), (req, res) => {
     return res.json({
         secret: 'The answer is always "A"!'
     })

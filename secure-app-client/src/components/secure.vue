@@ -28,7 +28,7 @@ export default {
         Authorization: `Bearer ${accessToken}`
       }
     })
-    let { data } = await client.get('/secure-data')
+    let { data } = await client.get('/secure')
     this.data = data
   }
 }
