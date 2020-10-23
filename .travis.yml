@@ -1,10 +1,6 @@
 language: node_js
 node_js:
   - "10"
-cache:
-  directories:
-    - node_modules
-    - ${SERVICE_PATH}/node_modules
 before_install:
   - pip install awscli
 install:
