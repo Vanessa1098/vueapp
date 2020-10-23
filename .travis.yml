@@ -9,12 +9,13 @@ before_install:
   - pip install awscli
 install:
   - npm install -g serverless
-  - npm install -g ally
+  - npm install -g chalk
   - travis_retry npm install
   - cd ${SERVICE_PATH}
   - travis_retry npm install
   - cd -
 script:
+  - npm run build
   - cd secure-app-server
   - serverless deploy
   - cd -
