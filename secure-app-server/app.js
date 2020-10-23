@@ -36,7 +36,7 @@ const authRequired = () => {
 // public route that anyone can access
 app.get('/hello', (req, res) => {
     return res.json({
-        message: 'Hello world!'
+        message: 'Hello! Welcome to my app!'
     })
 })
 
