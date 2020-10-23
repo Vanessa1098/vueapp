@@ -4,22 +4,17 @@ node_js:
 cache:
   directories:
     - ${SERVICE_PATH}/node_modules
-deploy:
-  - provider: s3
-  - provider: codedeploy
-    access_key_id: ${AWS_ACCESS_KEY_ID}
-    secret_access_key: ${AWS_SECRET_ACCESS_KEY}
-    bucket: "S3 Bucket"
-    application: MyApp
-    deployment_group: MyDeploymentGroup
 install:
   - npm install -g serverless
   - travis_retry npm install
   - cd ${SERVICE_PATH}
   - travis_retry npm install
   - cd -
-before-script:
-  - cd secure-app-server
 script:
+  - cd secure-app-server
   - serverless deploy
+  - cd -
+  - cd secure-app-client
+  - npm run build
+  - npm run deploy
   - cd -
