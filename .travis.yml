@@ -1,4 +1,19 @@
-language: java
-jdk: oraclejdk8
-script: mvn test -B
-dist: trusty
+language: node_js
+node_js:
+  - "10"
+cache:
+  directories:
+    - ${SERVICE_PATH}/node_modules
+install:
+  - npm install -g serverless
+  - travis_retry npm install
+  - cd ${SERVICE_PATH}
+  - travis_retry npm install
+  - cd -
+script:
+  - cd secure-app-server
+  - serverless deploy
+  - cd -
+  - cd secure-app-client
+  - npm run build
+  - npm run deploy
