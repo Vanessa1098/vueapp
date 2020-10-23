@@ -12,14 +12,15 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "deploy": "aws s3 sync ./dist s3://vueapp-secure-app-client"
+    "deploy": "aws s3 sync dist s3://vueapp-secure-app-client"
   },
   "dependencies": {
     "@okta/okta-vue": "^1.0.1",
     "axios": "^0.20.0",
     "selectors": "0.0.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "ally": "^0.2.13"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
