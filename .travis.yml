@@ -5,6 +5,7 @@ cache:
   directories:
     - ${SERVICE_PATH}/node_modules
 install:
+  - cd ${SERVICE_PATH}
   - npm install -g
   - cd -
 script:
