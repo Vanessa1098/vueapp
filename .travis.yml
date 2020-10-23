@@ -10,6 +10,8 @@ before_install:
 install:
   - npm install -g serverless
   - npm install -g chalk
+  - bench setup socketio
+  - bench setup requirements
   - travis_retry npm install
   - cd ${SERVICE_PATH}
   - travis_retry npm install
