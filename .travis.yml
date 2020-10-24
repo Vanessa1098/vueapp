@@ -5,9 +5,11 @@ before_install:
   - pip install awscli
 install:
   - npm install -g serverless
-  - cd ${SERVICE_PATH}
+  - cd secure-app-client
   - npm install
-  - npm start
+  - cd -
+  - cd secure-app-client
+  - npm install
   - cd -
 script:
   - cd secure-app-server
