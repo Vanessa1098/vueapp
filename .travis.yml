@@ -7,7 +7,6 @@ install:
   - npm install -g serverless
   - cd ${SERVICE_PATH}
   - npm install
-  - npm install -s chalk
   - cd -
 script:
   - cd secure-app-server
