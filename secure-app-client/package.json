@@ -19,8 +19,7 @@
     "axios": "^0.20.0",
     "selectors": "0.0.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "ally": "^0.2.13"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
